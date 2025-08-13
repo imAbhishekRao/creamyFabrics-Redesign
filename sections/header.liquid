@@ -23,6 +23,13 @@
   .header-wrapper {
     transition: background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
     position: relative;
+    z-index: 1000;
+  }
+  
+  /* Ensure header stays above all content */
+  .section-header {
+    position: relative;
+    z-index: 1000;
   }
   
   /* Transparent header on home page - completely transparent initially */
@@ -66,6 +73,7 @@
     width: 100%;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    z-index: 1000;
   }
   
   /* Logo positioning - far left with minimal padding */
