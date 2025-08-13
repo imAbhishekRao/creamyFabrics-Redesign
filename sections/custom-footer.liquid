@@ -1,0 +1,90 @@
+<div class="footer-wrapper">
+  <div class="footer-grid">
+    
+    <!-- LOGO -->
+    <div class="footer-col logo">
+      <img src="https://cdn.shopify.com/s/files/1/0648/5298/3875/files/cf_logo_neu_schwarz.png?v=1754387905" alt="{{ shop.name }} "width="230px" height="80px">
+    </div>
+
+    <!-- MENU -->
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="/pages/help">Hilfeseite</a></li>
+        <li><a href="/pages/returns">Umtausch / Retoure anmelden</a></li>
+        <li><a href="/pages/contact">Kontaktinformationen</a></li>
+        <li><a href="/pages/shipping">shipment tracking</a></li>
+        <li><a href="/pages/shipping-costs">Versand- und Rücksendekosten</a></li>
+        {% comment %} <li><a href="/account">Kunden Login & Registrierung</a></li> {% endcomment %}
+      </ul>
+    </div>
+
+    <!-- INFORMATION -->
+    <div class="footer-col">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="/pages/career">Karriere</a></li>
+        <li><a href="/policies/shipping-policy">Versandbedingungen</a></li>
+        <li><a href="/policies/refund-policy">Widerrufsrecht</a></li>
+        <li><a href="/policies/terms-of-service">Allgemeine Geschäftsbedingungen</a></li>
+        <li><a href="/pages/terms">Teilnahmebedingungen</a></li>
+        <li><a href="/policies/privacy-policy">Datenschutzerklärung</a></li>
+        <li><a href="/pages/impressum">Impressum</a></li>
+      </ul>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-col">
+      <h4>CREAMY NEWSLETTER</h4>
+      <p>Abonniere unser Newsletter und genieße exklusive creamy fabrics-Deals und Neuheiten!</p>
+      
+      {% form 'customer' %}
+        <input type="email" name="contact[email]" placeholder="Your email" required>
+        <button type="submit">→</button>
+      {% endform %}
+
+      <div class="social">
+        <h5>FOLLOW US</h5>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f">
+          </i>
+        </a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <div>
+      {{ localization.country.name }} ({{ localization.country.currency.symbol }}) &nbsp;&nbsp; | &nbsp;&nbsp; {{ localization.language.endonym_name }}
+    </div>
+    <div>
+      {{ shop.name }} &nbsp; • &nbsp; Powered by Shopify
+    </div>
+    <div class="payment-icons">
+      <p>We accept</p>
+      <img src="https://cdn.shopify.com/s/files/1/0648/5298/3875/files/Container_copy.webp?v=1754471033" alt="We accept" width="300px" height="30px">
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Footer",
+  "tag": "section",
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Custom Footer"
+    }
+  ]
+}
+{% endschema %}
+
+
+{% render 'custom-footer-css' %}
